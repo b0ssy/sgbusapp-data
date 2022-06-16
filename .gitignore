@@ -2,5 +2,11 @@
 *
 
 # Except these...
+!data/
+!data/*.json
+!data/*.json.sha256
 !.gitignore
+!index.js
+!package-lock.json
+!package.json
 !README.md
