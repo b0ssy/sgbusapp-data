@@ -44,7 +44,7 @@ async function sleep(milliseconds) {
 }
 
 async function writeFile(path, data) {
-  const str = JSON.stringify(data, undefined, '  ');
+  const str = JSON.stringify(data);
   const hash = crypto.createHash('sha256').update(str).digest('base64');
   await fs.writeFile(path, str, () => { });
   await fs.writeFile(`${path}.sha256`, hash, () => { });
